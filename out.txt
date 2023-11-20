@@ -1,0 +1,27 @@
+4 28 17
+fish animal bird fruit 
+|animal|
+alligator bear cat cow deer dog horse lion tiger 
+|bird|
+blackbird crow dove flamingo 
+|fish|
+catfish garfish goldfish salmon swordfish 
+|fruit|
+apple apricot avocado banana cherry coconut cranberry mango nectarine peach 
+There are 20 avocado found in fruit
+tilapia is not found in fish:(
+There are 15 cow found in animal
+There are 21 crow found in bird
+cow is not found in bird:(
+There are 32 cat found in animal
+items before deer: 4
+animal: left Height 2, Right Height 4, Difference 2Not Balanced
+bird: left Height 0, Right Height 3, Difference 3Not Balanced
+fish: left Height 2, Right Height 2, Difference 0 Balanced
+flower is not a thing
+There are 164 animals in the tree
+There are 510 fruits in the tree
+koala is not found in animal:(
+There are 32 cat found in animal
+There are 164 animals in the tree
+There are 100 mango found in fruit
