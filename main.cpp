@@ -111,7 +111,6 @@ itemNode *insertHelperItem(itemNode *root, char name[], int value)
   }
   return root;
 }
-
 treeNameNode *insertHelper(treeNameNode *groot, char name[])
 {
   if (groot == nullptr)
@@ -128,7 +127,6 @@ treeNameNode *insertHelper(treeNameNode *groot, char name[])
   }
   return groot;
 }
-
 treeNameNode *buildNameTree(ifstream &input, ofstream &output)
 {
 
@@ -151,13 +149,12 @@ treeNameNode *buildNameTree(ifstream &input, ofstream &output)
   {
     char name[30];
     input >> name;
-    output << name <<" ";
+    //output << name <<" ";
     groot = insertHelper(groot, name); //assign root to new root with updated nodes
   }
   output << endl;
   return groot;
 }
-
 void buildItemTree(treeNameNode *groot, ifstream &input)
 {
   char nameTree[30];
@@ -198,6 +195,18 @@ void inorderTraversalPrint(treeNameNode *groot, ofstream &output)
   cout << endl;
   output << endl;
   inorderTraversalPrint(groot->right,output); //visit right
+}
+void inorderTraversalPrintFirstLine(treeNameNode *groot, ofstream &output)
+{
+  if (groot == nullptr)
+  {
+    return;
+  }
+
+  inorderTraversalPrintFirstLine(groot->left,output); // visit left side
+  cout  << "|" << groot->treeName << "|";
+  output << "|" << groot->treeName << "|"; //output
+  inorderTraversalPrintFirstLine(groot->right,output); //visit right
 }
 int inorderCountItem(itemNode *groot)
 {
@@ -332,6 +341,9 @@ void queryDoing(ifstream &input, treeNameNode *groot, ofstream &output)
 void traverse_in_traverse(treeNameNode *groot, ifstream& input, ofstream &output){
   buildItemTree(groot, input);
   treeNameNode* temp = groot;
+  inorderTraversalPrintFirstLine(groot,output);
+  cout << endl;
+  output << endl;
   inorderTraversalPrint(groot,output);
   queryDoing(input, groot ,output);
   //all the other functions

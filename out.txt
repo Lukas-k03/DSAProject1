@@ -1,5 +1,6 @@
 4 28 17
-fish animal bird fruit 
+
+|animal||bird||fish||fruit|
 |animal|
 alligator bear cat cow deer dog horse lion tiger 
 |bird|
